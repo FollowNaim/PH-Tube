@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>PH Tube</title>
+    <style>
+      .active {
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="flex justify-between items-center py-4 px-6 border-b">
+        <div class="w-32">
+          <img src="./assets/Logo.png" alt="" />
+        </div>
+        <div>
+          <input
+            type="text"
+            id="search"
+            placeholder="Type here"
+            class="input input-bordered w-full pr-20 rounded-3xl"
+          />
+        </div>
+        <button class="btn btn-outline">Sort by View</button>
+      </nav>
+    </header>
+    <main>
+      <nav>
+        <div
+          id="categories-list"
+          class="flex gap-2 my-3 justify-center items-center"
+        >
+          <button id="home" class="btn category-btn">Home</button>
+        </div>
+      </nav>
+      <section>
+        <div
+          id="video-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4 py-6"
+        ></div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="customModal" class="modal">
+        <div class="modal-box">
+          <div id="modal-container"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
